@@ -1,17 +1,17 @@
 ### Installation
 다음 명령어를 통해 레포지토리를 클론합니다.
 ```
-$ git clone git@github.com:DoubleChat-Samdul/airflow.git
+$ git clone git@github.com:DoubleChat-Samdul/dags.git
 ```
 클론한 레포지토리의 디렉토리로 이동한 후, 현재 디렉토리의 절대 경로를 확인합니다.
 ```
 $ cd <CLONED_REPOSITORY>
 $ pwd
 ```
-출력된 절대 경로를 <path>로 설정한 후, AIRFLOW HOME 디렉토리의 airflow.cfg 파일에서 dags_folder 항목을 <PATH>/dags로 변경합니다.
+출력된 절대 경로를 <path>로 설정한 후, AIRFLOW HOME 디렉토리의 airflow.cfg 파일에서 dags_folder 항목을 <PATH>로 변경합니다.
 ```
 $ cat airflow.cfg | grep dags_folder
-dags_folder = <PATH>/dags
+dags_folder = <PATH>
 ```
 그 다음, airflow standalone 명령어를 실행하여 에어플로우 서버를 다시 시작하면, DAG는 <PATH>/dags 디렉토리에서 로드됩니다.
 
